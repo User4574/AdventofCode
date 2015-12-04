@@ -11,10 +11,10 @@ int** make2dWithOffset(int rows, int cols, int roff, int coff) {
   return (arr + roff);
 }
 
-void free2dWithOffset(int** arr, int rows, int roff) {
+void free2dWithOffset(int** arr, int rows, int roff, int coff) {
   int i;
   for(i = -roff; i < rows - roff ; i++)
-    free(arr[i]);
+    free(arr[i] - coff);
   free(arr - roff);
 }
 
@@ -78,6 +78,9 @@ int main() {
       if(rsmap[i][j] > 0)
         rssum++;
     }
+
+  free2dWithOffset(somap, 400, 200, 200);
+  free2dWithOffset(rsmap, 400, 200, 200);
 
   printf("Santa only: %d\nRobosanta:  %d\n", sosum, rssum);
   return 0;
