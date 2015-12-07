@@ -3,8 +3,8 @@
 #include <string.h>
 #include <openssl/md5.h>
 
-unsigned char* secret = "iwrupvqb";
-unsigned char* target = "000000";
+unsigned char secret[10];
+unsigned char target[10];
 unsigned char result[MD5_DIGEST_LENGTH];
 
 void hash(int i) {
@@ -35,6 +35,9 @@ int check(int len) {
 
 int main() {
   int i = 1, got5 = 0, got6 = 0;
+
+  scanf("%s", secret);
+  scanf("%s", target);
 
   while(!(got5 && got6)) {
     hash(i);
