@@ -1,8 +1,11 @@
 h1. Advent of Code
+
 This repo contains my code for the "Advent of Code":http://adventofcode.com/.
 
 h2. Building the solver
+
 To build any solver, run `make` in that directory.
 
 h2. Getting the solution
+
 To solve the problem, run it with `make run` or `time make run`.
