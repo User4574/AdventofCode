@@ -2,6 +2,8 @@ h1. Advent of Code
 
 This repo contains my code for the "Advent of Code":http://adventofcode.com/.
 
+I'm doing it all in C to get my C-fu up again.
+
 h2. Building the solver
 
 To build any solver, run `make` in that directory.
