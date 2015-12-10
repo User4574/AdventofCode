@@ -7,11 +7,11 @@ all: run
 
 -include override.mk
 
-${DAY}: ${DAY}.c
+${DAY}.bin: ${DAY}.c
 	gcc ${CFLAGS} -o $@ $< ${DAYFLAGS}
 
-run: ${DAY} ${INPUT}
-	./${DAY} < ${INPUT}
+run: ${DAY}.bin ${INPUT}
+	./${DAY}.bin < ${INPUT}
 
 clean:
 	rm -f ${DAY}
