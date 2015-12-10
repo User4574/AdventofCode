@@ -3,15 +3,17 @@ CFLAGS=
 DAYFLAGS=
 INPUT=${DAY}.input
 
+all: run
+
 -include override.mk
 
 ${DAY}: ${DAY}.c
-	@gcc ${CFLAGS} -o $@ $< ${DAYFLAGS}
+	gcc ${CFLAGS} -o $@ $< ${DAYFLAGS}
 
 run: ${DAY} ${INPUT}
-	@./${DAY} < ${INPUT}
+	./${DAY} < ${INPUT}
 
 clean:
-	@rm -f ${DAY}
+	rm -f ${DAY}
 
 .PHONY: run clean
