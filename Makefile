@@ -14,6 +14,6 @@ run: ${DAY}.bin ${INPUT}
 	./${DAY}.bin < ${INPUT}
 
 clean:
-	rm -f ${DAY}
+	rm -f ${DAY}.bin
 
 .PHONY: run clean
