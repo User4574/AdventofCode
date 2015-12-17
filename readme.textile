@@ -11,3 +11,10 @@ To build any solver, run `make` in that directory.
 h2. Getting the solution
 
 To solve the problem, run it with `make run` or `time make run`.
+
+h2. TODO
+
+* Day 7 - Never returns. Slow or loop?
+* Day 9 - Needs doing
+* Day 12 - Needs a teeny weeny JSON parser for part 2
+* Day 13 - Needs doing
