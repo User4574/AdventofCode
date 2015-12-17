@@ -1,0 +1,26 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+
+uint16_t* cache;
+char* incache;
+
+int wtoi(char* wire) {
+	int idx = 0, i;
+	for(i = 0; wire[i] != '\0'; i++) {
+		idx *= 26;
+		idx += wire[i];
+	}
+	return idx;
+}
+char iscached(char* wire) {
+	return incache[wtoi(wire)];
+}
+uint16_t getcache(char* wire) {
+	return cache[wtoi(wire)];
+}
+void putcache(char* wire, uint16_t value) {
+	cache[wtoi(wire)] = value;
+}
+
